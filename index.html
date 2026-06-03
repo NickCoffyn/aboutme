@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Coffyn - Senior CS Product Manager</title>
+    <title>Nick Coffyn - Systems Builder & AI Operator</title>
     <style>
         :root {
             --primary-color: #0d1117;
@@ -271,8 +271,13 @@
             text-decoration: none;
         }
 
-        .main-nav a i {
+        .main-nav a i,
+        .main-nav a svg {
             margin-right: 5px;
+        }
+
+        .social-links a svg {
+            margin-right: 4px;
         }
 
         .section {
@@ -335,6 +340,46 @@
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-grid,
+        .principles-list,
+        .skill-groups,
+        .compact-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-card.featured {
+            border-color: rgba(255, 153, 0, 0.55);
+            box-shadow: inset 0 1px 0 rgba(255, 153, 0, 0.15);
+        }
+
+        .principle-item,
+        .skill-group,
+        .timeline-slice {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .principle-item {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+
+        .skill-group h3,
+        .timeline-slice h3 {
+            color: var(--highlight-color);
+            margin-bottom: 0.6rem;
+        }
+
+        .compact-timeline > h3 {
+            color: var(--highlight-color);
+            grid-column: 1 / -1;
         }
 
         .project-title {
@@ -689,6 +734,10 @@
             color: var(--accent-color);
         }
 
+        .system-note {
+            min-height: auto;
+        }
+
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -905,9 +954,9 @@
                 <span id="themeText">Dark Mode</span>
             </button>
             <img src="profile.jpeg" alt="Nick Coffyn" class="profile-img">
-            <h1>NICK COFFYN</h1>
-            <p class="tagline">Senior CS Product Manager - Amazon</p>
-            <p>AI-driven customer service transformation specialist</p>
+            <h1>Nick Coffyn</h1>
+            <p class="tagline">Systems Builder · AI Operator · Operational Transformation</p>
+            <p>I build practical tools, workflows, data systems and AI-assisted processes that turn operational chaos into clarity.</p>
             
             <div class="social-links">
                 <a href="https://github.com/venilixus" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
@@ -917,34 +966,32 @@
         </header>
 
         <div class="banner">
-            <h2>Transforming Customer Service Through AI Innovation</h2>
-            <p>Leveraging <span class="banner-highlight">LLMs</span> and <span class="banner-highlight">data analytics</span> to create exceptional customer experiences while driving operational efficiency</p>
+            <h2>Practical Systems for Messy Operations</h2>
+            <p>15+ years across <span class="banner-highlight">Amazon</span>, <span class="banner-highlight">Mercedes-Benz</span> and <span class="banner-highlight">Google/Nest</span> environments, now focused on AI, automation, local software systems, operational intelligence and real-world business transformation.</p>
         </div>
 
         <!-- Main Navigation -->
         <nav class="main-nav">
-            <a href="folding-benelux.html"><i class="fas fa-dna"></i> Folding Benelux</a>
             <a href="#about"><i class="fas fa-user-circle"></i> About</a>
-            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-            <a href="#interests"><i class="fas fa-laptop-code"></i> Interests</a>
-            <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+            <a href="#work"><i class="fas fa-briefcase"></i> Work</a>
             <a href="#projects"><i class="fas fa-rocket"></i> Projects</a>
-            <a href="#skills"><i class="fas fa-language"></i> Skills</a>
+            <a href="#principles"><i class="fas fa-compass"></i> Principles</a>
+            <a href="#learning"><i class="fas fa-graduation-cap"></i> Learning</a>
             <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="folding-benelux.html"><i class="fas fa-dna"></i> Folding Benelux</a>
         </nav>
 
         <!-- 1. ABOUT ME SECTION -->
         <section class="section" id="about">
-            <h2 class="section-title"><i class="fas fa-user-circle"></i> About Me</h2>
-            <div class="animated-typing" id="typingText">
-                > const nickCoffyn = new AIEnthusiast();<br>
-                > nickCoffyn.init();
+            <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
+            <div class="animated-typing system-note">
+                systems.builder / ai.operator / operational.reality
             </div>
-            <p>With over 10 years of experience in transforming customer service operations, I currently lead AI-driven initiatives at Amazon as a Senior Product Manager. My expertise lies in implementing Large Language Models (LLMs) to enhance customer interactions, streamline support processes, and build scalable feedback systems that continuously improve AI performance.</p>
+            <p>I have spent most of my life around computers, systems and technology. I started experimenting with computers around age eight and built most of my technical understanding through reading, tinkering, breaking things, fixing things, and applying logic in the real world.</p>
             
-            <p>My unique background combines deep customer service expertise with a passion for technological innovation. This dual perspective allows me to bridge the gap between technical capabilities and real customer needs, creating solutions that deliver exceptional user experiences while driving operational efficiency.</p>
+            <p>Professionally, I have worked across customer service, quality, operations, product, AI transformation and process design in Amazon, Mercedes-Benz and Google/Nest environments. My real strength is connecting operational reality with technical possibility: understanding how people, tools, data and incentives interact, then building systems that make work clearer, faster and more useful.</p>
             
-            <p>I thrive on identifying opportunities for optimization and automation. My approach involves careful process analysis, cross-functional collaboration, and data-driven decision making. As I continue expanding my technical skills through Python and back-end development, I'm constantly seeking new ways to apply emerging technologies to solve complex business challenges.</p>
+            <p>I am interested in the places where technology meets messy reality: AI, automation, hardware, robotics, recycling, data systems, market intelligence, knowledge systems and operational transformation.</p>
 
             <div class="skills-chart">
                 <div class="skill-chart-item">
@@ -952,265 +999,226 @@
                         <strong>Current Focus Areas</strong>
                     </div>
                     <div class="skills">
-                        <span class="skill-tag">LLM Implementation</span>
-                        <span class="skill-tag">AI Feedback Systems</span>
-                        <span class="skill-tag">CS Transformation</span>
+                        <span class="skill-tag">AI Operators</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Operational Intelligence</span>
                     </div>
                 </div>
                 <div class="skill-chart-item">
                     <div class="skill-chart-label">
-                        <strong>Core Expertise</strong>
+                        <strong>Builder Terrain</strong>
                     </div>
                     <div class="skills">
-                        <span class="skill-tag">Product Management</span>
-                        <span class="skill-tag">Process Optimization</span>
-                        <span class="skill-tag">Cross-Functional Leadership</span>
+                        <span class="skill-tag">Local Apps</span>
+                        <span class="skill-tag">Dashboards</span>
+                        <span class="skill-tag">Hardware Systems</span>
                     </div>
                 </div>
                 <div class="skill-chart-item">
                     <div class="skill-chart-label">
-                        <strong>Technical Skills</strong>
+                        <strong>Systems Lens</strong>
                     </div>
                     <div class="skills">
-                        <span class="skill-tag">Data Analytics</span>
-                        <span class="skill-tag">Custom PC Building</span>
-                        <span class="skill-tag">Python (Learning)</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="achievements-timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-achievements">
-                    <div class="timeline-achievement">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2017</div>
-                        <div class="timeline-description">Deployed Quality Framework across Benelux & UK</div>
-                    </div>
-                    <div class="timeline-achievement">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2021</div>
-                        <div class="timeline-description">Amazon Door Desk Award</div>
-                    </div>
-                    <div class="timeline-achievement">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2022</div>
-                        <div class="timeline-description"><a href="https://www.playlostark.com/en-us/game/credits" target="_blank">Featured in Lost Ark Credits</a> (Amazon Games)</div>
-                    </div>
-                    <div class="timeline-achievement">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2023</div>
-                        <div class="timeline-description">First AI-Enhanced CS Platform</div>
-                    </div>
-                    <div class="timeline-achievement">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-description">LLM-Powered CS Transformation</div>
+                        <span class="skill-tag">People</span>
+                        <span class="skill-tag">Tools</span>
+                        <span class="skill-tag">Data</span>
+                        <span class="skill-tag">Incentives</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. PROFESSIONAL EXPERIENCE SECTION -->
-        <section class="section" id="experience">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <!-- 2. WHAT I BUILD SECTION -->
+        <section class="section" id="projects">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> What I Build</h2>
+            <div class="project-grid">
+                <div class="project-card featured">
+                    <h3 class="project-title">Hermes</h3>
+                    <p>A personal operating assistant focused on scheduling, time tracking, momentum, and low-friction execution.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Assistant Systems</span>
+                        <span class="skill-tag">Scheduling</span>
+                        <span class="skill-tag">Execution</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <h3 class="project-title">AutoStock</h3>
+                    <p>An internal stock-capture and material-tracking system using iPhone capture, FastAPI, SQLite, OCR and local dashboards for scrap-yard operations.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">OCR</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <h3 class="project-title">Scout</h3>
+                    <p>A market-intelligence concept for tracking companies, sectors, signals and operational opportunities.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Market Intelligence</span>
+                        <span class="skill-tag">Signals</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <h3 class="project-title">SmartSort</h3>
+                    <p>An AI-powered component classification and sorting concept for e-waste, combining OCR, image recognition, part databases and resale/quality estimation.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">AI Feedback Systems</span>
+                        <span class="skill-tag">E-waste</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <h3 class="project-title">Degels / MDTech Transformation</h3>
+                    <p>Operational modernization work for a traditional metal recycling business, including internal tools, dashboards, stock visibility, production tracking, and future AI/automation concepts.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">SME Transformation</span>
+                        <span class="skill-tag">Dashboards</span>
+                        <span class="skill-tag">Stock Visibility</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <h3 class="project-title">VexTrack</h3>
+                    <p>A personal finance and investment tracking system focused on Trading212 data, tax-relevant holding periods and portfolio visibility.</p>
+                    <div class="project-tags">
+                        <span class="skill-tag">Portfolio Tracking</span>
+                        <span class="skill-tag">Tax Windows</span>
+                        <span class="skill-tag">Data Visibility</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PRINCIPLES SECTION -->
+        <section class="section" id="principles">
+            <h2 class="section-title"><i class="fas fa-compass"></i> Principles</h2>
+            <div class="principles-list">
+                <div class="principle-item">Understand systems, not symptoms.</div>
+                <div class="principle-item">Build more than you consume.</div>
+                <div class="principle-item">Prefer useful truth over comfortable nonsense.</div>
+                <div class="principle-item">Reduce friction wherever possible.</div>
+                <div class="principle-item">Data should support decisions, not decorate dashboards.</div>
+                <div class="principle-item">Technology is only valuable when it improves reality.</div>
+                <div class="principle-item">Curiosity compounds, but only execution converts it.</div>
+                <div class="principle-item">Small actions create large trajectories.</div>
+            </div>
+        </section>
+
+        <!-- 4. WORK SECTION -->
+        <section class="section" id="work">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work</h2>
             
             <div class="tab-container">
                 <div class="tabs">
-                    <button class="tab active" data-tab="amazon">Amazon <span class="company-years">(5.7 years)</span></button>
-                    <button class="tab" data-tab="mercedes">Mercedes <span class="company-years">(2.9 years)</span></button>
-                    <button class="tab" data-tab="previous">Previous</button>
+                    <button class="tab active" data-tab="amazon">Amazon <span class="company-years">(2019-2025)</span></button>
+                    <button class="tab" data-tab="mercedes">Mercedes-Benz <span class="company-years">(2017-2019)</span></button>
+                    <button class="tab" data-tab="previous">Google/Nest Environment</button>
                 </div>
                 
                 <div class="tab-content active" id="amazon">
                     <div class="experience-item">
-                        <h3 class="experience-title">Senior CS Product Manager</h3>
-                        <p class="experience-company" style="color: #FF9900;">Amazon</p>
-                        <p class="experience-date">2025 - Present | Luxembourg, Luxembourg</p>
+                        <h3 class="experience-title">AI / Product / Systems Transformation Focus</h3>
+                        <p class="experience-company" style="color: #FF9900;">Amazon and adjacent builder work</p>
+                        <p class="experience-date">2025 - Present | Luxembourg</p>
                         <ul>
-                            <li>Leading the development and optimization of customer service feedback mechanisms, linking them with AI-powered support options</li>
-                            <li>Collaborating with engineering and AI teams to refine machine learning models that enhance automated customer interactions</li>
-                            <li>Driving process improvements to ensure seamless integration of LLM-driven customer support solutions</li>
-                            <li>Partnering with stakeholders across customer service, product, and engineering to build scalable feedback-driven AI workflows</li>
+                            <li>Focused on AI-assisted operational systems, feedback loops, internal tooling and practical process redesign.</li>
+                            <li>Connecting product thinking with local software, data visibility and execution workflows.</li>
                         </ul>
                     </div>
                     
                     <div class="experience-item">
-                        <h3 class="experience-title">CS LLM Senior Program Manager</h3>
+                        <h3 class="experience-title">CS LLM / Operational Intelligence / Quality Roles</h3>
                         <p class="experience-company" style="color: #FF9900;">Amazon</p>
-                        <p class="experience-date">May 2023 - 2025 | Luxembourg, Luxembourg</p>
+                        <p class="experience-date">2019 - 2025 | Luxembourg</p>
                         <ul>
-                            <li>Led AI-powered customer service transformation, integrating LLM-driven solutions to enhance user experience</li>
-                            <li>Partnered with tech teams to optimize internal AI-enabled support platforms, improving response efficiency</li>
-                            <li>Managed cross-functional initiatives, scaling AI support systems to reduce manual workload and improve service delivery</li>
-                            <li>Developed customer feedback loops and VoC initiatives, streamlining AI model adjustments based on real-world user inputs</li>
-                            <li>Led a team experimenting with LLMs, driving quick learnings on how to enable and leverage LLMs for customer service improvements</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <h3 class="experience-title">Ops Intel Manager</h3>
-                        <p class="experience-company" style="color: #FF9900;">Amazon</p>
-                        <p class="experience-date">September 2021 - May 2023 | Luxembourg, Luxembourg</p>
-                        <ul>
-                            <li>Established an Operational Intelligence framework, leveraging data insights to optimize service performance</li>
-                            <li>Drove customer experience enhancement programs, aligning user expectations with evolving AI service models</li>
-                            <li>Led data-driven service improvements, ensuring seamless integration of AI-based solutions across global support teams</li>
-                            <li>Managed a team of 20 Quality Analysts from various levels, optimizing global quality strategies for emerging products</li>
+                            <li>Worked across customer service expansion, quality systems, operational intelligence, AI workflow design and LLM-enabled transformation.</li>
+                            <li>Built feedback mechanisms, operating models and decision loops for complex support environments.</li>
+                            <li>Partnered with operations, product, engineering and AI teams to turn frontline reality into usable systems.</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="tab-content" id="mercedes">
                     <div class="experience-item">
-                        <h3 class="experience-title">Global Quality Specialist & Project Manager</h3>
-                        <p class="experience-company mercedes-color">Daimler - Mercedes</p>
-                        <p class="experience-date">November 2018 - June 2019 | Maastricht, Netherlands</p>
+                        <h3 class="experience-title">Quality Specialist / Project Lead / Global Quality Specialist</h3>
+                        <p class="experience-company mercedes-color">Mercedes-Benz</p>
+                        <p class="experience-date">2017 - 2019 | Maastricht, Netherlands</p>
                         <ul>
-                            <li>Creation and deployment of Global Quality Framework</li>
-                            <li>Relationship builder with global vendors</li>
-                            <li>Deployment & roll out of Global LMS</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <h3 class="experience-title">Quality Specialist & Project Lead</h3>
-                        <p class="experience-company mercedes-color">Daimler - Mercedes</p>
-                        <p class="experience-date">January 2017 - November 2018 | Maastricht, Netherlands</p>
-                        <ul>
-                            <li>Increase of quality for Benelux, UK / Ireland</li>
-                            <li>Quality assessment of 200 agents</li>
-                            <li>Active representative and introduction of NPS</li>
-                            <li>Assisting in CSS Root Cause Analysis & closed feedback loop</li>
-                            <li>Project lead for Global Innovative Leadership</li>
+                            <li>Designed and deployed quality frameworks across Benelux, UK and global support environments.</li>
+                            <li>Worked on LMS rollout, vendor coordination, NPS, process adherence and closed feedback loops.</li>
+                            <li>Translated operational patterns into clearer standards, training systems and measurable quality routines.</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="tab-content" id="previous">
                     <div class="experience-item">
-                        <h3 class="experience-title">Trainer & Quality Lead - Alphabet Nest (Google)</h3>
-                        <p class="experience-company">Voxpro <span class="company-years">(1.3 years)</span></p>
-                        <p class="experience-date">August 2015 - December 2016 | Dublin, Ireland</p>
+                        <h3 class="experience-title">Trainer & Quality Lead - Alphabet Nest / Google Environment</h3>
+                        <p class="experience-company">Voxpro</p>
+                        <p class="experience-date">2015 - 2016 | Dublin, Ireland</p>
                         <ul>
-                            <li>Built several new SOP's that have been accepted throughout the company</li>
-                            <li>Created a process adherence and self-guided training web app platform for agents (Call Flow)</li>
-                            <li>Having trained 8 classes of new CS agent to be the top performers within the contract</li>
-                            <li>Working closely with all levels of the company, entry level to senior ops and daily meetings with our client (Nest)</li>
+                            <li>Worked in the Nest support environment across training, quality and process adherence.</li>
+                            <li>Built SOPs and a self-guided process web app concept for agent call flow and consistency.</li>
+                            <li>Developed practical frontline systems before the work had fashionable names.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="timeline">
+            <div class="compact-timeline">
                 <h3>Career Timeline</h3>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2025-Present</h3>
-                        <p>Senior CS Product Manager at Amazon</p>
-                    </div>
+                <div class="timeline-slice">
+                    <h3>2015-2016</h3>
+                    <p>Voxpro / Google Nest environment: training, quality, SOPs and call-flow systems.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2023-2025</h3>
-                        <p>CS LLM Senior Program Manager at Amazon</p>
-                    </div>
+                <div class="timeline-slice">
+                    <h3>2017-2019</h3>
+                    <p>Mercedes-Benz: quality frameworks, LMS rollout, NPS and process design.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2021-2023</h3>
-                        <p>Ops Intel Manager at Amazon</p>
-                    </div>
+                <div class="timeline-slice">
+                    <h3>2019-2025</h3>
+                    <p>Amazon: customer service expansion, operational intelligence, LLM workflows and AI transformation.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2019-2021</h3>
-                        <p>Amazon CS NL Expansion & Quality Manager</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2018-2019</h3>
-                        <p>Global Quality Specialist at Mercedes-Benz</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2017-2018</h3>
-                        <p>Quality Specialist at Mercedes-Benz</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2015-2016</h3>
-                        <p>Trainer & Quality Lead at Voxpro (Google Nest)</p>
-                    </div>
+                <div class="timeline-slice">
+                    <h3>2025-Present</h3>
+                    <p>AI / product / systems transformation focus across practical tools and operational modernization.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. WHAT I DO ON THE SIDE SECTION -->
+        <!-- 5. PERMANENT INTEREST ZONES SECTION -->
         <section class="section" id="interests">
-            <h2 class="section-title"><i class="fas fa-laptop-code"></i> What I Do on the Side</h2>
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Permanent Interest Zones</h2>
             
             <div class="side-interests">
                 <div class="interest-card">
-                    <h3 class="interest-title"><i class="fas fa-server"></i> Hardware Enthusiast</h3>
-                    <p>I build and optimize high-performance computing systems that contribute to scientific research. As the #2 contributor on Amazon's Folding@Home team (donor ID: 366956), my custom-built machines support global distributed computing projects advancing medical research on diseases like cancer and COVID-19.</p>
+                    <h3 class="interest-title"><i class="fas fa-cogs"></i> Systems & Automation</h3>
+                    <p>AI tools, workflows, dashboards, databases, local apps, process design.</p>
                 </div>
                 
                 <div class="interest-card">
-                    <h3 class="interest-title"><i class="fas fa-robot"></i> AI Research & Experimentation</h3>
-                    <p>Beyond my professional work, I actively explore emerging AI technologies and applications. This hands-on experimentation with LLMs and machine learning models provides valuable insights that inform my product decisions and help me identify innovative solutions to complex service challenges.</p>
+                    <h3 class="interest-title"><i class="fas fa-server"></i> Hardware & Tinkering</h3>
+                    <p>Custom PCs, servers, distributed computing, sensors, cameras, robotics, repair and experimentation.</p>
                 </div>
                 
                 <div class="interest-card">
-                    <h3 class="interest-title"><i class="fas fa-code"></i> Technical Skill Development</h3>
-                    <p>I'm currently advancing my technical foundation through Boot.dev's Back-end Developer career path, focusing on Python, Linux, Git, and related technologies. This structured learning approach enables me to better understand system architecture and communicate more effectively with engineering teams.</p>
+                    <h3 class="interest-title"><i class="fas fa-brain"></i> Human Systems</h3>
+                    <p>Psychology, philosophy, incentives, organizations, leadership, history and decision-making.</p>
                 </div>
                 
                 <div class="interest-card">
-                    <h3 class="interest-title"><i class="fas fa-universal-access"></i> Digital Rights Advocacy</h3>
-                    <p>Since 2017, I've volunteered as a translator for European Digital Rights (EDRi), helping translate legal and informative documents related to digital rights for consumers and businesses. This work reflects my commitment to ethical technology practices and informed digital citizenship.</p>
+                    <h3 class="interest-title"><i class="fas fa-satellite-dish"></i> Culture & Signal</h3>
+                    <p>Music, films, games, news, books, long-form ideas and the patterns behind culture.</p>
                 </div>
             </div>
 
-            <div class="learning-progress">
-                <h3><i class="fas fa-graduation-cap"></i> Current Learning Progress</h3>
-                <div class="course-item">
-                    <h4>Learn to Code in Python</h4>
-                    <div class="course-progress">
-                        <span>29/161 exercises completed</span>
-                        <span>18%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 18%;"></div>
-                    </div>
-                </div>
-                <div class="course-item">
-                    <h4>Learn Linux</h4>
-                    <div class="course-progress">
-                        <span>Up next in Boot.dev curriculum</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
-                    </div>
-                </div>
-                <div class="course-item">
-                    <h4>Overall Backend Journey</h4>
-                    <div class="course-progress">
-                        <span>Just getting started!</span>
-                        <span>5%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 5%;"></div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="folding-stats">
                 <h3><i class="fas fa-server"></i> Folding@Home Stats - Donor ID: 366956</h3>
+                <p>I build and run custom computing systems that contribute to Folding@Home, supporting distributed scientific research. I reached #2 contributor on Amazon's Folding@Home team, combining my interest in hardware, optimization and useful distributed computing.</p>
                 <div class="stat-row">
                     <span class="stat-label">Team Rank</span>
                     <span class="stat-value">#2 on Amazon's Team</span>
@@ -1230,45 +1238,17 @@
             </div>
         </section>
 
-        <!-- 4. ACHIEVEMENTS SECTION -->
-        <section class="section" id="achievements">
-            <h2 class="section-title"><i class="fas fa-trophy"></i> Achievements</h2>
-            
-            <div class="achievement-card">
-                <h3 class="achievement-title">
-                    <i class="fas fa-gem"></i> Courage I Had
-                </h3>
-                <p>Moved to 5 different countries for new work challenges, embracing diverse cultures and professional environments to expand my horizons and skill set.</p>
-            </div>
-            
-            <div class="achievement-card">
-                <h3 class="achievement-title">
-                    <i class="fas fa-bolt"></i> Proud Achievements
-                </h3>
-                <p>1. Won Amazon's prestigious Door Desk Award for exceptional contributions</p>
-                <p>2. Headhunted by Mercedes-Benz CAC and later by Amazon Customer Service, recognizing my expertise in quality management and process transformation</p>
-            </div>
-
-            <div class="achievement-card">
-                <h3 class="achievement-title">
-                    <i class="fas fa-server"></i> Technical Achievement
-                </h3>
-                <p>Ranked #2 on Amazon's Folding@Home team, contributing significant computing power to scientific research through custom-built hardware setups.</p>
-            </div>
-        </section>
-
-        <!-- 5. PROJECTS SECTION -->
-        <section class="section" id="projects">
-            <h2 class="section-title"><i class="fas fa-rocket"></i> Featured Projects</h2>
+        <!-- 6. FEATURED PROJECTS SECTION -->
+        <section class="section" id="featured-projects">
+            <h2 class="section-title"><i class="fas fa-diagram-project"></i> Featured Projects</h2>
             
             <div class="project-card">
                 <h3 class="project-title">LLM-Powered Customer Service Transformation</h3>
                 <p class="experience-date">2023 - Present | Amazon</p>
-                <p>Leading the integration of Large Language Models into Amazon's customer service ecosystem, resulting in more efficient issue resolution, reduced manual workload, and enhanced customer satisfaction. This initiative has revolutionized how customers interact with support systems.</p>
+                <p>Worked on LLM-enabled service transformation, connecting customer feedback, operational workflows and support tooling into more useful AI-assisted processes.</p>
                 <div class="project-tags">
                     <span class="skill-tag">AI Integration</span>
                     <span class="skill-tag">LLMs</span>
-                    <span class="skill-tag">Customer Experience</span>
                     <span class="skill-tag">Process Transformation</span>
                 </div>
             </div>
@@ -1276,39 +1256,55 @@
             <div class="project-card">
                 <h3 class="project-title">Feedback-Driven AI Workflow System</h3>
                 <p class="experience-date">2024 - Present | Amazon</p>
-                <p>Developed an innovative system that captures customer feedback and automatically refines AI models, creating a continuous improvement loop. This strategic initiative has resulted in more accurate AI responses and significantly improved first-contact resolution rates.</p>
+                <p>Designed feedback loops and operating patterns that help AI workflows learn from real customer and operational signals.</p>
                 <div class="project-tags">
-                    <span class="skill-tag">AI Model Optimization</span>
                     <span class="skill-tag">Feedback Systems</span>
-                    <span class="skill-tag">Machine Learning</span>
                     <span class="skill-tag">VoC Integration</span>
+                    <span class="skill-tag">Workflow Design</span>
                 </div>
             </div>
             
             <div class="project-card">
                 <h3 class="project-title">Operational Intelligence Framework</h3>
                 <p class="experience-date">2021 - 2023 | Amazon</p>
-                <p>Established a data-driven operational intelligence framework that leverages advanced analytics to optimize service performance and enable predictive decision-making across global support teams.</p>
+                <p>Built operational intelligence routines that made service performance, quality signals and decision patterns easier to understand and act on.</p>
                 <div class="project-tags">
                     <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Predictive Analytics</span>
-                    <span class="skill-tag">Operational Excellence</span>
+                    <span class="skill-tag">Quality Systems</span>
+                    <span class="skill-tag">Operational Intelligence</span>
                 </div>
             </div>
 
             <div class="project-card">
                 <h3 class="project-title">Project Marvin / Call Flow</h3>
                 <p class="experience-date">2015 - 2017 | Dublin</p>
-                <p>Spearheaded and created a Web App for customer service agents that assists in correct procedure adherence, increasing consistency across a team of 100 agents and boosting positive customer survey scores by 9.28%.</p>
+                <p>Created a process-adherence web app concept for customer service agents, focused on clearer procedure flow and more consistent execution.</p>
                 <div class="project-tags">
                     <span class="skill-tag">Web Development</span>
                     <span class="skill-tag">Process Improvement</span>
                     <span class="skill-tag">Training Tools</span>
                 </div>
             </div>
+
+            <div class="project-grid">
+                <div class="project-card"><h3 class="project-title">Hermes</h3><p>Personal operating assistant for scheduling, time tracking and execution.</p></div>
+                <div class="project-card"><h3 class="project-title">AutoStock</h3><p>Material capture and stock visibility for scrap-yard operations.</p></div>
+                <div class="project-card"><h3 class="project-title">Scout</h3><p>Market-intelligence concept for sectors, companies and opportunity signals.</p></div>
+                <div class="project-card"><h3 class="project-title">SmartSort</h3><p>AI-assisted component classification and sorting concept for e-waste.</p></div>
+                <div class="project-card"><h3 class="project-title">VexTrack</h3><p>Trading212 and portfolio visibility system with tax-relevant holding periods.</p></div>
+            </div>
         </section>
 
-        <!-- 6. LANGUAGES & SKILLS SECTION -->
+        <!-- 7. LEARNING SECTION -->
+        <section class="section" id="learning">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Learning</h2>
+            <div class="learning-progress">
+                <h3><i class="fas fa-terminal"></i> Software Engineering Foundations</h3>
+                <p>Currently strengthening my software engineering foundations through Boot.dev, focused on Python, Linux, Git, SQL, APIs, backend systems and AI-native tooling.</p>
+            </div>
+        </section>
+
+        <!-- 8. LANGUAGES & SKILLS SECTION -->
         <section class="section" id="skills">
             <h2 class="section-title"><i class="fas fa-language"></i> Languages & Skills</h2>
             
@@ -1331,42 +1327,72 @@
                 </div>
             </div>
             
-            <div class="experience-item">
-                <h3 class="experience-title">Professional Skills</h3>
-                
-                <p>Project Management</p>
-                <div class="progress-bar">
-                    <div class="progress proficient"></div>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h3>Operations & Product</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Product Management</span>
+                        <span class="skill-tag">Process Optimization</span>
+                        <span class="skill-tag">Operational Intelligence</span>
+                        <span class="skill-tag">Quality Systems</span>
+                        <span class="skill-tag">VoC</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                    </div>
                 </div>
-                
-                <p>Training</p>
-                <div class="progress-bar">
-                    <div class="progress advanced"></div>
+                <div class="skill-group">
+                    <h3>AI & Data</h3>
+                    <div class="skills">
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">AI Feedback Systems</span>
+                        <span class="skill-tag">RAG Exploration</span>
+                        <span class="skill-tag">Data Analytics</span>
+                        <span class="skill-tag">Automation Workflows</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="skills">
-                <span class="skill-tag">AI/LLM Implementation</span>
-                <span class="skill-tag">Product Management</span>
-                <span class="skill-tag">Customer Service Transformation</span>
-                <span class="skill-tag">PC Building</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">VoC & Feedback Systems</span>
-                <span class="skill-tag">Process Optimization</span>
-                <span class="skill-tag">Cross-functional Leadership</span>
-                <span class="skill-tag">Python (Learning)</span>
-                <span class="skill-tag">Distributed Computing</span>
+                <div class="skill-group">
+                    <h3>Technical</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Local Servers</span>
+                        <span class="skill-tag">Hardware</span>
+                        <span class="skill-tag">Distributed Computing</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Business / Strategy</h3>
+                    <div class="skills">
+                        <span class="skill-tag">SME Transformation</span>
+                        <span class="skill-tag">Systems Thinking</span>
+                        <span class="skill-tag">Market Intelligence</span>
+                        <span class="skill-tag">Workflow Design</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 7. CONTACT ME SECTION -->
+        <!-- 9. CONTACT SECTION -->
+        <section class="section" id="contact">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+            <p>The simplest routes are still the useful ones.</p>
+            <div class="social-links">
+                <a href="https://github.com/venilixus" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/nick-coffyn/" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:nickcoffyn@me.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </section>
+
         <a href="#" class="back-to-top" id="backToTop">
             <i class="fas fa-arrow-up"></i>
         </a>
 
         <footer>
-            <p>© 2025 Nick Coffyn. All rights reserved.</p>
-            <p>This page was last updated on March 22, 2025</p>
+            <p>© 2026 Nick Coffyn. All rights reserved.</p>
+            <p>This page was last updated on June 3, 2026</p>
             <p><a href="https://stats.foldingathome.org/donor/id/366956" target="_blank">Visit my Folding@Home stats</a></p>
         </footer>
     </div>
@@ -1377,33 +1403,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
-        // Simplified typing effect
         document.addEventListener('DOMContentLoaded', function() {
-            const typingText = document.getElementById('typingText');
-            if (typingText) {
-                const text = [
-                    "> const nickCoffyn = new AIEnthusiast();",
-                    "> nickCoffyn.init();",
-                    "> nickCoffyn.setSkills(['AI', 'LLM', 'CustomerService', 'Hardware']);",
-                    "> nickCoffyn.optimize(processes);",
-                    "> console.log('Ready to transform customer experiences with AI!')"
-                ];
-                
-                let fullText = '';
-                let currentLine = 0;
-                
-                const typeNextLine = () => {
-                    if (currentLine < text.length) {
-                        fullText += text[currentLine] + '<br>';
-                        typingText.innerHTML = fullText;
-                        currentLine++;
-                        setTimeout(typeNextLine, 1000);
-                    }
-                };
-                
-                typeNextLine();
-            }
-            
             // Simple tab functionality
             const tabs = document.querySelectorAll('.tab');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -1527,4 +1527,3 @@
     </script>
 </body>
 </html>
-
