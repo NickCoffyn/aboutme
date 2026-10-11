@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy - Nick Coffyn</title>
     <style>
@@ -21,6 +22,9 @@
         <h2>Who runs this website</h2>
         <p>This is the personal website of Nick Coffyn. Contact: <a href="mailto:nickcoffyn@me.com">nickcoffyn@me.com</a>.</p>
 
+        <h2>What this website loads</h2>
+        <p>All scripts, icons and images are served from this website&rsquo;s own address. No files are loaded from other services, and there are no advertising or social media plugins.</p>
+
         <h2>Visitor statistics</h2>
         <p>I count page visits with Matomo, which I run myself on the same server that hosts this website. It is used only to see how many people visit which pages.</p>
         <ul>
@@ -33,9 +37,6 @@
             <li>If your browser sends Do Not Track or Global Privacy Control, no statistics are collected.</li>
         </ul>
         <p>Legal basis: my legitimate interest in knowing how the website is used (Article 6(1)(f) GDPR).</p>
-
-        <h2>Files loaded from cdnjs</h2>
-        <p>The home page loads its icons (Font Awesome) and background animation (particles.js) from cdnjs, a public file service run by Cloudflare. Your browser connects to cdnjs directly to fetch these files, so Cloudflare receives your IP address and browser information under its own privacy policy. This privacy page does not load them.</p>
 
         <h2>Server logs</h2>
         <p>The web server keeps a technical log of requests (IP address, time, page requested and browser type) to troubleshoot problems and detect abuse. The log is size-limited and overwritten automatically.</p>
