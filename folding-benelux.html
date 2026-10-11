@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<link rel="icon" href="/favicon.ico">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Folding Benelux – Folding@home Team 1067639</title>
 <style>
@@ -18,39 +20,29 @@ background-repeat:repeat-x; background-position:top center; }
 .hardware-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px; }
 .hw { background:#21262d; padding:12px; border-radius:8px; border:1px solid #30363d; }
 .badge-box svg { width:120px; margin:10px; }
-canvas { width:100%; height:180px; background:#111; border-radius:6px; margin-top:10px; }
 </style>
+<script src="/mt.js" defer></script>
 </head>
 <body>
 <div class="container">
 <h1>Folding Benelux – Folding@home Team 1067639</h1>
 
 <div class="hero">
-<h2>Why We Fold</h2>
-<p>We believe in using what we have to push science forward — through computation that fuels real biomedical research.
-Folding Benelux represents Belgium, the Netherlands, and Luxembourg as a unified technical footprint contributing
-quietly, consistently, without ego. Progress isn’t loud; it’s cumulative.</p>
+<h2>About the team</h2>
+<p>I founded Folding Benelux to represent Belgium, the Netherlands and Luxembourg on Folding@home, contributing computing power to biomedical research. I have since stopped contributing compute; the figures below are the final totals.</p>
 </div>
 
 <div class="team-id">Team ID: 1067639</div>
 
-<h2>Live Team Stats</h2>
-<div id="statsBox" class="stats-box">Loading stats…</div>
-
-<h2>Your Donor Dashboard</h2>
-<div class="card">
-<div id="donorBox">Loading donor stats…</div>
-<canvas id="creditGraph"></canvas>
+<h2>Final stats</h2>
+<div class="stats-box">
+<b>Folding Benelux team:</b> 1,460,161,062 points from 3,005 work units (team rank 1,268).<br>
+<b>My contribution to the team:</b> 1,457,910,841 points from 2,948 work units.<br>
+<b>My overall total (donor Venilix, ID 366956):</b> 4,359,202,428 points from 9,126 work units, ranked 1,535 of 3,021,483 donors.<br>
+<small>Source: Folding@home stats, retrieved 11 October 2026.</small>
 </div>
 
-<h2>Member Leaderboard</h2>
-<div class="card">
-<table id="leaderboard" style="width:100%; border-collapse:collapse;">
-<tr><th>User</th><th>Credit</th><th>WUs</th></tr>
-</table>
-</div>
-
-<h2>Your Folding Farm</h2>
+<h2>Hardware I folded on</h2>
 <div class="hardware-grid">
 <div class="hw">Windows Gaming PC<br>Ryzen 7 7700X<br>RTX 4080<br>64GB DDR5<br>Windows 11 Pro</div>
 <div class="hw">Mac Pro 5,1<br>Dual Xeon X5690<br>RX 580<br>64GB DDR3 ECC<br>macOS / Windows</div>
@@ -72,64 +64,7 @@ quietly, consistently, without ego. Progress isn’t loud; it’s cumulative.</p
 
 </div>
 
-<script>
-// Fetch Team Stats
-async function loadTeam(){
-try{
-let r=await fetch("/data/team.json");
-let d=await r.json();
-document.getElementById("statsBox").innerHTML=`
-<b>Rank:</b> ${d.rank}<br>
-<b>Total Credit:</b> ${d.credit.toLocaleString()}<br>
-<b>WUs:</b> ${d.wus.toLocaleString()}<br>
-<b>Active Donors:</b> ${d.active_50}
-`;
-let tbl=document.getElementById("leaderboard");
-tbl.innerHTML="<tr><th>User</th><th>Credit</th><th>WUs</th></tr>";
-d.members.slice(0,10).forEach(m=>{
-tbl.innerHTML+=`<tr><td>${m.name}</td><td>${m.credit.toLocaleString()}</td><td>${m.wus}</td></tr>`;
-});
-}catch(e){document.getElementById("statsBox").innerHTML="Stats unavailable yet.";}
-}
-loadTeam(); setInterval(loadTeam,30000);
 
-// Donor dashboard + graph
-async function loadDonor(){
-try{
-let r=await fetch("/data/donor.json");
-let d=await r.json();
-document.getElementById("donorBox").innerHTML=`
-<b>Your Total Credit:</b> ${d.credit.toLocaleString()}<br>
-<b>Your WUs:</b> ${d.wus}<br>
-<b>Your Rank:</b> ${d.rank}
-`;
-let hist=JSON.parse(localStorage.getItem("creditHist")||"[]");
-hist.push({t:Date.now(),c:d.credit});
-if(hist.length>200) hist=hist.slice(-200);
-localStorage.setItem("creditHist",JSON.stringify(hist));
-drawGraph(hist);
-}catch(e){document.getElementById("donorBox").innerHTML="Waiting for first WU...";}
-}
-loadDonor(); setInterval(loadDonor,30000);
-
-function drawGraph(hist){
-let c=document.getElementById("creditGraph");
-let x=c.getContext("2d");
-c.width=c.clientWidth; c.height=180;
-x.clearRect(0,0,c.width,c.height);
-if(hist.length<2) return;
-let max=Math.max(...hist.map(p=>p.c));
-let min=Math.min(...hist.map(p=>p.c));
-let range=max-min||1;
-x.strokeStyle="#FF9900"; x.lineWidth=2; x.beginPath();
-hist.forEach((p,i)=>{
-let px=(i/(hist.length-1))*c.width;
-let py=c.height-((p.c-min)/range)*c.height;
-if(i===0) x.moveTo(px,py); else x.lineTo(px,py);
-});
-x.stroke();
-}
-</script>
-
+<p style="text-align:center;font-size:.85rem"><a href="/privacy" style="color:#FF9900">Privacy</a></p>
 </body>
 </html>
