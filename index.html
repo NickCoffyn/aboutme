@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Jww+c3zja55AnX49v0Q1FCt0IQ1rk1GUyCC/HfFwG60='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <link rel="icon" href="/favicon.ico">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-nJQnJIXxtr9Q123r0eg2Jd7HyTPyFREBl+3Rm5g0bp8='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick Coffyn - Systems Builder & AI Operator</title>
     <style>
@@ -1043,45 +1044,6 @@
                         <span class="skill-tag">Execution</span>
                     </div>
                 </div>
-
-                <div class="project-card featured">
-                    <h3 class="project-title">AutoStock</h3>
-                    <p>An internal stock-capture and material-tracking system using iPhone capture, FastAPI, SQLite, OCR and local dashboards for scrap-yard operations.</p>
-                    <div class="project-tags">
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">SQLite</span>
-                        <span class="skill-tag">OCR</span>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-                    <h3 class="project-title">Scout</h3>
-                    <p>A market-intelligence concept for tracking companies, sectors, signals and operational opportunities.</p>
-                    <div class="project-tags">
-                        <span class="skill-tag">Market Intelligence</span>
-                        <span class="skill-tag">Signals</span>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-                    <h3 class="project-title">SmartSort</h3>
-                    <p>An AI-powered component classification and sorting concept for e-waste, combining OCR, image recognition, part databases and resale/quality estimation.</p>
-                    <div class="project-tags">
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">AI Feedback Systems</span>
-                        <span class="skill-tag">E-waste</span>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-                    <h3 class="project-title">VexTrack</h3>
-                    <p>A personal finance and investment tracking system focused on Trading212 data, tax-relevant holding periods and portfolio visibility.</p>
-                    <div class="project-tags">
-                        <span class="skill-tag">Portfolio Tracking</span>
-                        <span class="skill-tag">Tax Windows</span>
-                        <span class="skill-tag">Data Visibility</span>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1210,18 +1172,22 @@
 
             <div class="folding-stats">
                 <h3><i class="fas fa-server"></i> Folding@Home Stats - Donor ID: 366956</h3>
-                <p>I build and run custom computing systems that contribute to Folding@Home, supporting distributed scientific research. I reached #2 contributor on Amazon's Folding@Home team, combining my interest in hardware, optimization and useful distributed computing.</p>
+                <p>I previously built and ran custom computing systems that contributed to Folding@Home, supporting distributed scientific research. I reached #2 contributor on Amazon's Folding@Home team and founded the Folding Benelux team. I no longer contribute compute; figures below are final totals from Folding@Home, retrieved 11 October 2026.</p>
                 <div class="stat-row">
                     <span class="stat-label">Team Rank</span>
                     <span class="stat-value">#2 on Amazon's Team</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Work Units Completed</span>
-                    <span class="stat-value">5,000+</span>
+                    <span class="stat-value">9,126</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Active Hardware</span>
+                    <span class="stat-label">Hardware Used</span>
                     <span class="stat-value">3 Custom-Built Rigs</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Total Points</span>
+                    <span class="stat-value">4,359,202,428</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Contribution Focus</span>
@@ -1280,10 +1246,6 @@
 
             <div class="project-grid">
                 <div class="project-card"><h3 class="project-title">Hermes</h3><p>Personal operating assistant for scheduling, time tracking and execution.</p></div>
-                <div class="project-card"><h3 class="project-title">AutoStock</h3><p>Material capture and stock visibility for scrap-yard operations.</p></div>
-                <div class="project-card"><h3 class="project-title">Scout</h3><p>Market-intelligence concept for sectors, companies and opportunity signals.</p></div>
-                <div class="project-card"><h3 class="project-title">SmartSort</h3><p>AI-assisted component classification and sorting concept for e-waste.</p></div>
-                <div class="project-card"><h3 class="project-title">VexTrack</h3><p>Trading212 and portfolio visibility system with tax-relevant holding periods.</p></div>
             </div>
         </section>
 
@@ -1453,13 +1415,8 @@
             if (tabsContainer) {
                 const activeTab = tabsContainer.querySelector('.tab.active');
                 if (activeTab && window.innerWidth < 768) {
-                    setTimeout(() => {
-                        activeTab.scrollIntoView({
-                            behavior: 'smooth',
-                            inline: 'center',
-                            block: 'nearest'
-                        });
-                    }, 500);
+                    // Centre the active tab horizontally without scrolling the page
+                    tabsContainer.scrollLeft = activeTab.offsetLeft - (tabsContainer.clientWidth - activeTab.clientWidth) / 2;
                 }
             }
             
